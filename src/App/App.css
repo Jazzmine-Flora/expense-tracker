@@ -1,0 +1,109 @@
+body {
+  font-family: "Comic Sans MS", cursive, sans-serif; /* Fun and playful font */
+  background-color: #ffe6f2; /* Light pink background */
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #fff0f6; /* Softer pink for the container */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+}
+
+h1 {
+  color: #ff66b2; /* Bright pink for the heading */
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: #ff66b2; /* Pink labels */
+}
+
+form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ff99cc; /* Pink border */
+  border-radius: 8px;
+}
+
+button {
+  background-color: #ff66b2; /* Pink buttons */
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ff3385; /* Darker pink on hover */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ff99cc; /* Pink border for list items */
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+h3 {
+  color: #ff66b2; /* Pink for total expenses */
+  font-size: 18px;
+  margin-top: 20px;
+  text-align: right;
+}
+
+.btn-pink {
+  background-color: #ff66b2; /* Bright pink */
+  color: #fff; /* White text */
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-pink:hover {
+  background-color: #ff3385; /* Darker pink on hover */
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  border-radius: 50%; /* Make it circular if desired */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a soft shadow */
+}
