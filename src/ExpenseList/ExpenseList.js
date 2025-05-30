@@ -14,10 +14,16 @@ function ExpenseList({ expenses, onDeleteExpense, onEditExpense }) {
               {expense.name}: ${expense.amount}
             </span>
             <div>
-              <button className="btn btn-warning btn-sm me-2">
+              <button
+                className="btn btn-warning btn-sm me-2"
+                onClick={() => onEditExpense(index)}
+              >
                 <i className="fas fa-edit"></i> Edit
               </button>
-              <button className="btn btn-danger btn-sm">
+              <button
+                className="btn btn-danger btn-sm"
+                onClick={() => onDeleteExpense(index)}
+              >
                 <i className="fas fa-trash"></i> Delete
               </button>
             </div>
