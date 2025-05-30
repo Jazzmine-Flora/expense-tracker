@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/expense-tracker/static/css/main.b5d05ee5.css",
+    "main.css": "/expense-tracker/static/css/main.a1dd384e.css",
     "main.js": "/expense-tracker/static/js/main.ba2043b5.js",
     "static/media/fa-solid-900.ttf": "/expense-tracker/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/fa-brands-400.ttf": "/expense-tracker/static/media/fa-brands-400.1815e00441357e01619e.ttf",
@@ -12,11 +12,11 @@
     "static/media/fa-v4compatibility.ttf": "/expense-tracker/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/expense-tracker/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/expense-tracker/index.html",
-    "main.b5d05ee5.css.map": "/expense-tracker/static/css/main.b5d05ee5.css.map",
+    "main.a1dd384e.css.map": "/expense-tracker/static/css/main.a1dd384e.css.map",
     "main.ba2043b5.js.map": "/expense-tracker/static/js/main.ba2043b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5d05ee5.css",
+    "static/css/main.a1dd384e.css",
     "static/js/main.ba2043b5.js"
   ]
 }
