@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 
 import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Import Font Awesome CSS
-import logo from "../assets/bird.png"; // Import bird image
-import AddExpenseForm from "../AddExpenseForm/AddExpenseForm"; // Adjust path for AddExpenseForm
-import ExpenseList from "../ExpenseList/ExpenseList"; // Adjust path for ExpenseList
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import logo from "../assets/bird.png";
+import AddExpenseForm from "../AddExpenseForm/AddExpenseForm";
+import ExpenseList from "../ExpenseList/ExpenseList";
 
 function App() {
   const [expenses, setExpenses] = useState([
@@ -22,10 +21,10 @@ function App() {
     setExpenses(expenses.filter((_, i) => i !== index));
   };
 
-  const [editingIndex, setEditingIndex] = useState(null); // Track which expense is being edited
+  const [editingIndex, setEditingIndex] = useState(null);
 
   const editExpense = (index) => {
-    setEditingIndex(index); // Set the index of the expense to be edited
+    setEditingIndex(index);
   };
 
   const updateExpense = (updatedExpense) => {
@@ -33,7 +32,7 @@ function App() {
       index === editingIndex ? updatedExpense : expense
     );
     setExpenses(updatedExpenses);
-    setEditingIndex(null); // Reset editing index after updating
+    setEditingIndex(null);
   };
 
   const totalExpenses = expenses.reduce(
@@ -43,21 +42,45 @@ function App() {
 
   return (
     <div className="App">
-      <div className="logo-container text-center mb-4">
-        <img src={logo} alt="Cute Logo" className="logo" />
+      <div className="App__container">
+        <header className="App__header">
+          <div className="App__logo-wrap">
+            <img
+              src={logo}
+              alt=""
+              className="App__logo"
+              width={48}
+              height={48}
+              decoding="async"
+            />
+          </div>
+          <h1 className="App__title">Expense Tracker</h1>
+          <p className="App__subtitle">Track spending and stay on budget</p>
+        </header>
+
+        <main className="App__card">
+          <AddExpenseForm
+            onAddExpense={addExpense}
+            onUpdateExpense={updateExpense}
+            editingExpense={editingIndex !== null ? expenses[editingIndex] : null}
+          />
+        </main>
+
+        <section className="App__card" aria-label="Expense list">
+          <ExpenseList
+            expenses={expenses}
+            onDeleteExpense={deleteExpense}
+            onEditExpense={editExpense}
+          />
+        </section>
+
+        <div className="App__total-wrap" aria-live="polite">
+          <p className="App__total-label">Total expenses</p>
+          <p className="App__total-value">
+            ${Number(totalExpenses).toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+          </p>
+        </div>
       </div>
-      <h1>Expense Tracker</h1>
-      <AddExpenseForm
-        onAddExpense={addExpense}
-        onUpdateExpense={updateExpense}
-        editingExpense={editingIndex !== null ? expenses[editingIndex] : null}
-      />
-      <ExpenseList
-        expenses={expenses}
-        onDeleteExpense={deleteExpense}
-        onEditExpense={editExpense}
-      />
-      <h3>Total Expenses: ${totalExpenses}</h3>
     </div>
   );
 }
