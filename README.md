@@ -24,6 +24,17 @@ The **Expense Tracker** is a simple and visually appealing web application desig
 - **Font Awesome**: For icons.
 - **gh-pages**: For deployment to GitHub Pages.
 
+## Deployment (GitHub Pages)
+
+After running `npm run deploy`, GitHub Pages must use the **gh-pages** branch, not the default branch. Otherwise the site will show the README instead of the app.
+
+1. In your repo, go to **Settings** → **Pages**.
+2. Under **Build and deployment** → **Source**, choose **Deploy from a branch**.
+3. Under **Branch**, select **gh-pages** and **/ (root)**.
+4. Click **Save**. The site will update in 1–2 minutes.
+
+Live site: https://Jazzmine-Flora.github.io/expense-tracker
+
 ## Installation
 
 To run this project locally, follow these steps:
